@@ -1,0 +1,281 @@
+/*import font primario -> MONTSERRAT*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*settings generali del foglio*/
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11pt;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow-x: hidden;
+  scroll-snap-type: mandatory;
+  background-color: var(--eerie-black);
+}
+
+:root {
+  /*colori*/
+  --seasalt: #f8f9faff;
+  --antiflash-white: #e9ecefff;
+  --platinum: #dee2e6ff;
+  --french-gray: #ced4daff;
+  --french-gray-2: #adb5bdff;
+  --slate-gray: #6c757dff;
+  --outer-space: #495057ff;
+  --onyx: #343a40ff;
+  --eerie-black: #212529ff;
+  /*peso font*/
+  --text-bold: 400px;
+  --text-big: 500px;
+
+  /*prova*/
+}
+
+/*box superiore*/
+#banner_superiore {
+  width: 160rem;
+  overflow: hidden;
+  height: 30rem;
+  background-image: url(../../images/education.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -70rem;
+  color: var(--antiflash-white);
+  display: flex;
+  flex-direction: column;
+}
+#banner_superiore h2 {
+  font-size: 70px;
+  font-weight: 600;
+  position: relative;
+  left: 2rem;
+  margin-top: 11rem;
+}
+#banner_superiore em {
+  display: block;
+  position: relative;
+  left: 2rem;
+  top: -0.5rem;
+  font-size: 20px;
+}
+/*box descrizione*/
+.informazioni {
+  width: 85%;
+  color: var(--antiflash-white);
+  padding: 2rem;
+  border: 1px solid var(--onyx);
+  border-radius: 11px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin-top: 2rem;
+  text-align: justify;
+}
+.informazioni h1 {
+  text-align: left;
+}
+.informazioni #immagine {
+  width: 100%;
+  height: 10rem;
+  background-image: url(../../images/immagine.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -220px;
+  border-radius: 7px;
+  margin-bottom: 2rem;
+}
+#due #immagine {
+  background-image: url(../../images/highway.jpg);
+  background-position: 0px -400px;
+}
+#tre #immagine {
+  background-image: url(../../images/police.jpg);
+  background-position: 0px -300px;
+}
+
+.interno {
+  padding: 2rem;
+  background-color: var(--onyx);
+  border-radius: 6px;
+  margin-top: 2rem;
+}
+
+body hr {
+  width: 100%;
+  height: 0.5rem;
+  color: var(--french-gray);
+  margin-top: 2rem;
+}
+
+/*footer*/
+footer {
+  background-color: rgb(43, 47, 52);
+  margin-top: 5rem;
+  width: 100%;
+  color: var(--antiflash-white);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.superiore {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+#sezione_sinistra {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+#sezione_sinistra img {
+  filter: invert(100%);
+  width: 5rem;
+  margin-right: 0.5rem;
+}
+
+#sezione_sinistra p {
+  margin: 0;
+}
+
+#sezione_destra {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex: 2;
+}
+
+#colonna_1,
+#colonna_2 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 300px;
+}
+
+#colonna_1 h4,
+#colonna_2 h4 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+#colonna_1 hr,
+#colonna_2 hr {
+  margin: 0.5rem 0;
+  height: 0.5px;
+  border: 0.2px solid var(--antiflash-white);
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+ul li a {
+  color: var(--antiflash-white);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.inferiore {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+#sinistra,
+#destra {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  #sezione_destra {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .superiore {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #sezione_sinistra {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  #sezione_sinistra img {
+    width: 4rem;
+  }
+
+  .inferiore {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 1.5rem;
+  }
+
+  .superiore {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  #sezione_destra {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  #colonna_1,
+  #colonna_2 {
+    max-width: 100%;
+  }
+
+  #sinistra,
+  #destra {
+    font-size: 0.8rem;
+  }
+
+  .inferiore {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #banner_superiore {
+    background-size: 100rem;
+  }
+
+  #banner_superiore h2 {
+    font-size: 50px;
+  }
+
+  #banner_superiore em {
+    font-size: 10px;
+  }
+}
+footer ul li a:hover {
+  text-decoration: underline;
+}
